@@ -1,4 +1,4 @@
-// Menerima activeMenu dan onMenuClick sebagai Props
+// #5.1 Menerima state activeMenu dan fungsi setter onMenuClick dari induk
 function Navbar({ activeMenu, onMenuClick }) {
   const menu = ["Home", "Request"];
 
@@ -9,7 +9,9 @@ function Navbar({ activeMenu, onMenuClick }) {
         {menu.map((item) => (
           <li
             key={item}
+            // #5.2 Penanda menu aktif berasal dari props
             className={item === activeMenu ? "active" : ""}
+            // #5.3 Memanggil fungsi induk untuk mengganti state
             onClick={() => onMenuClick(item)}
           >
             {item}

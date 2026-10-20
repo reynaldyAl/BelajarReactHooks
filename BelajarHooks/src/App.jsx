@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar.jsx";
 import Hero from "./components/Hero.jsx";
 import TrackList from "./components/TrackList.jsx";
 import RequestForm from "./components/RequestForm.jsx"; // Ini ganti Contact Form
-import PlayerFooter from "./components/PlayerFooter.jsx";
+import Footer from "./components/Footer.jsx";
 import "./App.css";
 
 const laguData = [
@@ -36,7 +36,7 @@ function App() {
       {activeMenu === "Request" && <RequestForm />}
       
       {/* Footer selalu menerima lagu yang sedang diputar */}
-      <PlayerFooter lagu={nowPlaying} />
+          <Footer lagu={nowPlaying} activeMenu={activeMenu} />  
     </div>
   );
 }
