@@ -1,25 +1,17 @@
-// #5.1 Menerima state activeMenu dan fungsi setter onMenuClick dari induk
-function Navbar({ activeMenu, onMenuClick }) {
-  const menu = ["Home", "Request"];
-
-  return (
-    <nav className="navbar">
-      <h2>SoundVibe</h2>
-      <ul>
-        {menu.map((item) => (
-          <li
-            key={item}
-            // #5.2 Penanda menu aktif berasal dari props
-            className={item === activeMenu ? "active" : ""}
-            // #5.3 Memanggil fungsi induk untuk mengganti state
-            onClick={() => onMenuClick(item)}
-          >
-            {item}
-          </li>
-        ))}
-      </ul>
-    </nav>
-  );
+/*
+ * KOMPONEN #5: Navbar
+ *
+ * Tujuan: belajar menerima state dan event handler melalui props.
+ *
+ * Petunjuk:
+ * 1. Terima props activeMenu dan onMenuClick.
+ * 2. Buat daftar menu dalam array.
+ * 3. Gunakan .map() untuk menampilkan setiap menu.
+ * 4. Tandai menu aktif berdasarkan activeMenu.
+ * 5. Panggil onMenuClick ketika menu dipilih.
+ */
+function Navbar() {
+  return null;
 }
 
 export default Navbar;

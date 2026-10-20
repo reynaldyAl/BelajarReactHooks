@@ -1,23 +1,17 @@
-// #3.1 Mengimpor TrackCard yang sudah dibuat di langkah #2
-import TrackCard from "./TrackCard.jsx";
-
-// #3.2 Menerima props daftarLagu (array) dan onPlaySong (fungsi)
-function TrackList({ daftarLagu, onPlaySong }) {
-  return (
-    <div className="track-list">
-      {/* #3.3 Mengulang data array menjadi komponen TrackCard */}
-      {daftarLagu.map((lagu) => (
-        <TrackCard
-          key={lagu.id}
-          cover={lagu.cover}
-          judul={lagu.judul}
-          artis={lagu.artis}
-          // #3.4 Meneruskan lagu yang dipilih ke fungsi induk
-          onPlay={() => onPlaySong(lagu)}
-        />
-      ))}
-    </div>
-  );
+/*
+ * KOMPONEN #3: TrackList
+ *
+ * Tujuan: belajar melakukan iterasi data array dan meneruskan props.
+ *
+ * Petunjuk:
+ * 1. Terima props daftarLagu dan onPlaySong.
+ * 2. Gunakan .map() untuk mengulang daftar lagu.
+ * 3. Render satu TrackCard untuk setiap item.
+ * 4. Kirim key yang unik menggunakan id lagu.
+ * 5. Teruskan cover, judul, artis, dan handler Play ke TrackCard.
+ */
+function TrackList() {
+  return null;
 }
 
 export default TrackList;
