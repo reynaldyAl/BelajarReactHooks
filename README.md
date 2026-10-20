@@ -14,7 +14,7 @@ Buka terminal, lalu jalankan perintah berikut secara berurutan:
 1. Clone repositori:
 
    ```bash
-   git clone <PASTE_LINK_REPO_GITHUB_DI_SINI>
+   git clone <https://github.com/reynaldyAl/BelajarReactHooks.git>
    ```
 
 2. Masuk ke folder aplikasi:
