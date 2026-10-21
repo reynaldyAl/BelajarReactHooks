@@ -1,17 +1,14 @@
-/*
- * KOMPONEN #5: Navbar
- *
- * Tujuan: belajar menerima state dan event handler melalui props.
- *
- * Petunjuk:
- * 1. Terima props activeMenu dan onMenuClick.
- * 2. Buat daftar menu dalam array.
- * 3. Gunakan .map() untuk menampilkan setiap menu.
- * 4. Tandai menu aktif berdasarkan activeMenu.
- * 5. Panggil onMenuClick ketika menu dipilih.
- */
 function Navbar() {
-  return null;
+  return (
+    <nav className="navbar">
+      <h2>SoundVibe</h2>
+      <ul>
+        {/* Menu statis: kelas active masih ditempel manual */}
+        <li className="active">Home</li>
+        <li>Request</li>
+      </ul>
+    </nav>
+  );
 }
 
 export default Navbar;

@@ -1,16 +1,17 @@
-/*
- * KOMPONEN #1: Hero
- *
- * Tujuan: belajar menerima props dan default props.
- *
- * Petunjuk:
- * 1. Terima props nama dan jurusan dengan destructuring.
- * 2. Berikan nilai default jika props belum dikirim.
- * 3. Tampilkan props tersebut di dalam JSX.
- * 4. Tambahkan gambar avatar sebagai bagian dari tampilan hero.
- */
 function Hero() {
-  return null;
+  return (
+    <section className="hero">
+      <img
+        src="https://api.dicebear.com/10.x/lorelei/svg?seed=Milo"
+        alt="Profile"
+      />
+      <div className="hero-info">
+        {/* Teks statis: nantinya diganti dengan props { nama, jurusan } */}
+        <h1>Rey</h1>
+        <p>Playlist by Mahasiswa Sistem Informasi</p>
+      </div>
+    </section>
+  );
 }
 
 export default Hero;

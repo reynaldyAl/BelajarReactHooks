@@ -1,18 +1,18 @@
-/*
- * KOMPONEN #4: RequestForm
- *
- * Tujuan: belajar membuat Controlled Component.
- *
- * Petunjuk:
- * 1. Import useState dari React.
- * 2. Buat state untuk menyimpan nilai input.
- * 3. Hubungkan value input dengan state.
- * 4. Gunakan onChange untuk memperbarui state.
- * 5. Gunakan onSubmit untuk menangani pengiriman form.
- * 6. Panggil preventDefault agar halaman tidak melakukan reload.
- */
 function RequestForm() {
-  return null;
+  return (
+    <div className="contact-form">
+      <h2 style={{ marginBottom: "15px" }}>Request Lagu</h2>
+
+      <form>
+        {/* Input biasa tanpa value atau onChange */}
+        <input
+          type="text"
+          placeholder="Ketik judul lagu & artis..."
+        />
+        <button type="submit">Kirim Request</button>
+      </form>
+    </div>
+  );
 }
 
 export default RequestForm;
