@@ -1,25 +1,28 @@
-function TrackCard() {
+import { useState } from "react";
+
+// #2.1 Menerima props: cover, judul, artis, dan fungsi onPlay
+function TrackCard({ cover, judul, artis, onPlay }) {
+  // #2.2 [STATE LOKAL] State mandiri untuk tombol like tiap kartu lagu
+  const [suka, setSuka] = useState(0);
+
   return (
     <div className="track-card">
-      {/* Gambar dan teks statis: nantinya diganti dari Props */}
-      <img
-        src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=100"
-        alt="Midnight City"
-      />
+      {/* #2.3 Data dibaca dari Props (Read-only) */}
+      <img src={cover} alt={judul} />
 
       <div className="track-info">
-        <h4>Midnight City</h4>
-        <p>M83</p>
+        <h4>{judul}</h4>
+        <p>{artis}</p>
       </div>
 
       <div className="track-actions">
-        {/* Angka statis: nantinya dihubungkan ke useState */}
-        <button className="btn-like">
-          😻 Suka (0)
+        {/* #2.4 Mengubah State lokal menggunakan setSuka */}
+        <button className="btn-like" onClick={() => setSuka(suka + 1)}>
+          😻 Suka ({suka})
         </button>
 
-        {/* Tombol belum memiliki aksi */}
-        <button className="btn-play">
+        {/* #2.5 Menjalankan fungsi onPlay yang dioper dari induk */}
+        <button className="btn-play" onClick={onPlay}>
           ▶ Play
         </button>
       </div>
